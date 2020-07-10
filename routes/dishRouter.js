@@ -5,7 +5,7 @@ const dishRouter = express.Router();
 dishRouter.use(bodyparser.json());
 
 dishRouter.route('/')
-.use((req,res,next) => { 
+.all((req,res,next) => { 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
     next();
